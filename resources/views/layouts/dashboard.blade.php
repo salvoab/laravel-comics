@@ -24,7 +24,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    DC
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -72,9 +72,25 @@
             </div>
         </nav>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xs-12 col-md-2 col-lg-2">
+                    <aside class="py-4">
+                        <ul class="list-unstyled">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Comics</a></li>
+                            <li><a href="#">Articles</a></li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-xs-12 col-md-10 col-lg-10">
+                    <main class="py-4">
+                        @yield('content')
+                    </main>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
