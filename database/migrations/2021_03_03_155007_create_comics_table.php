@@ -26,6 +26,7 @@ class CreateComicsTable extends Migration
             $table->date('sale_date');
             $table->unsignedTinyInteger('page_count');
             $table->string('rated', 20);
+            $table->unsignedTinyInteger('available');
             $table->timestamps();
         });
     }

@@ -18,6 +18,9 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -77,8 +80,8 @@
                 <div class="col-xs-12 col-md-2 col-lg-2">
                     <aside class="py-4">
                         <ul class="list-unstyled">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Comics</a></li>
+                            <li><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
+                            <li><a href="{{ route('admin.comics.index') }}">Comics</a></li>
                             <li><a href="#">Articles</a></li>
                         </ul>
                     </aside>
