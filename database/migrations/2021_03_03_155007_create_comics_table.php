@@ -21,10 +21,10 @@ class CreateComicsTable extends Migration
             $table->string('author');
             $table->string('artist');
             $table->unsignedSmallInteger('volume');
-            $table->float('price', 4, 2);
-            $table->string('trim_size');
-            $table->date('sale_date');
-            $table->unsignedTinyInteger('page_count');
+            $table->float('price', 4, 2)->nullable();
+            $table->string('trim_size')->nullable();
+            $table->date('sale_date')->nullable();
+            $table->unsignedTinyInteger('page_count')->nullable();
             $table->string('rated', 20);
             $table->unsignedTinyInteger('available');
             $table->timestamps();
