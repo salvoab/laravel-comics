@@ -37,7 +37,25 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        //dd($request->all());
+        $validatedData = $request->validate([
+            'series' => 'required',
+            'cover' => 'required|image',
+            'description' => 'required',
+            'author' => 'required',
+            'artist' => 'required',
+            'volume' => 'required|integer|min:0',
+            'price' => 'nullable|numeric',
+            'trim_size' => 'nullable',
+            'sale_date' => 'nullable',
+            'page_count' => 'nullable|integer|min:0',
+            'rated' => 'required'
+        ]);
+
+        $validatedData['available'] = $request->has('available') ? 1 : 0;
+        dd($validatedData);
+
+
     }
 
     /**
