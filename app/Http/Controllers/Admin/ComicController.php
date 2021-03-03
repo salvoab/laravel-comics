@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ComicController extends Controller
 {
@@ -40,7 +41,7 @@ class ComicController extends Controller
         //dd($request->all());
         $validatedData = $request->validate([
             'series' => 'required',
-            'cover' => 'required|image',
+            'cover' => 'required|mimes:jpeg,png,jpg,gif,svg|max:500',
             'description' => 'required',
             'author' => 'required',
             'artist' => 'required',
@@ -53,7 +54,8 @@ class ComicController extends Controller
         ]);
 
         $validatedData['available'] = $request->has('available') ? 1 : 0;
-        dd($validatedData);
+        $cover = Storage::put('cover_imgs', $request->cover);
+        dd($validatedData, $cover);
 
 
     }
