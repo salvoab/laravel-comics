@@ -14,9 +14,10 @@ class AuthorSeeder extends Seeder
     public function run(Faker $faker)
     {
         for ($i=0; $i < 10; $i++) { 
-            $artist = new Author();
-            $artist->name = $faker->firstName();
-            $artist->lastname = $faker->lastName;
+            $author = new Author();
+            $author->name = $faker->firstName();
+            $author->lastname = $faker->lastName;
+            $author->save();
         }
     }
 }

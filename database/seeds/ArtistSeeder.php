@@ -17,6 +17,7 @@ class ArtistSeeder extends Seeder
             $artist = new Artist();
             $artist->name = $faker->firstName();
             $artist->lastname = $faker->lastName;
+            $artist->save();
         }
     }
 }
