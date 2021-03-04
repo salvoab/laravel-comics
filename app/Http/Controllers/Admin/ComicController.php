@@ -125,6 +125,7 @@ class ComicController extends Controller
         }
 
         $comic->update($validatedData);
+        $comic->artists()->sync($request->artist_ids);
         return redirect()->route('admin.comics.index');
     }
 
