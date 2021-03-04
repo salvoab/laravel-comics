@@ -70,7 +70,7 @@ class ArticleController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -82,7 +82,20 @@ class ArticleController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $validatedData = $request->validate([
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        
+        if($request->has('cover')){
+            $cover = Storage::put('artilce_covers', $request->cover); //Salvo l'immagine e conservo il percorso in $cover
+            $validatedData['cover'] = $cover;
+            $oldArticle = Article::find($article->id); // prendo l'articolo nel database prima di aggiornarlo
+            Storage::delete($oldArticle->cover); // e cancella la sua vecchia cover
+        }
+
+        $article->update($validatedData);
+        return redirect()->route('admin.articles.index');
     }
 
     /**
