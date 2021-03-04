@@ -88,7 +88,9 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        $authors = Author::all();
+        $artists = Artist::all();
+        return view('admin.comics.edit', compact('comic', 'authors', 'artists'));
     }
 
     /**
@@ -100,7 +102,30 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        //dd($request->all());
+        $validatedData = $request->validate([
+            'series' => 'required',
+            'description' => 'required',
+            'author_id' => 'required|integer|min:1',
+            'volume' => 'required|integer|min:0',
+            'price' => 'nullable|numeric',
+            'trim_size' => 'nullable',
+            'sale_date' => 'nullable',
+            'page_count' => 'nullable|integer|min:0',
+            'rated' => 'required'
+        ]);
+
+        $validatedData['available'] = $request->has('available') ? 1 : 0;
+        
+        if($request->has('cover')){
+            $cover = Storage::put('cover_imgs', $request->cover); //Salvo l'immagine e conservo il percorso in $cover
+            $validatedData['cover'] = $cover;
+            $oldComic = Comic::find($comic->id); // prendo il comic nel database prima di aggiornarlo
+            Storage::delete($oldComic->cover); // e cancella la sua vecchia cover
+        }
+
+        $comic->update($validatedData);
+        return redirect()->route('admin.comics.index');
     }
 
     /**
