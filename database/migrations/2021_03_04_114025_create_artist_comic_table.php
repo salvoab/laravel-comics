@@ -14,14 +14,13 @@ class CreateArtistComicTable extends Migration
     public function up()
     {
         Schema::create('artist_comic', function (Blueprint $table) {
-            $table->id();
+           
             $table->unsignedBigInteger('artist_id');
             $table->foreign('artist_id')->references('id')->on('artists');
 
             $table->unsignedBigInteger('comic_id');
             $table->foreign('comic_id')->references('id')->on('comics');
 
-            $table->timestamps();
         });
     }
 
