@@ -31,25 +31,31 @@
         <div class="alert alert-danger">{{ $message }}</div>
     @enderror
 
-    <div class="form-group">
-      <label for="author">Author</label>
-      <input type="text"
-        class="form-control" name="author" id="author" aria-describedby="author-helper" placeholder="Author" value="{{ old('author') }}">
-      <small id="author-helper" class="form-text text-muted">Type the Author's name</small>
-    </div>
-    @error('author')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
+    @if(count($authors) > 0)
+      <div class="form-group">
+        <label for="author_id">Author</label>
+        <select class="form-control" name="author_id" id="author_id">
+          @foreach($authors as $author)
+            <option value="{{ $author->id }}" {{ $author->id == old('author_id') ? 'selected' : '' }} > 
+              {{ $author->name . ' ' . $author->lastname }} 
+            </option>
+          @endforeach
+        </select>
+      </div>
+    @endif
 
-    <div class="form-group">
-      <label for="artist">Artist</label>
-      <input type="text"
-        class="form-control" name="artist" id="artist" aria-describedby="artist-helper" placeholder="Artist" value="{{ old('artist') }}">
-      <small id="artist-helper" class="form-text text-muted">Type the Artist's name</small>
-    </div>
-    @error('artist')
-        <div class="alert alert-danger">{{ $message }}</div>
-    @enderror
+    @if(count($artists) > 0)
+      <div class="form-group">
+        <label for="artist_id">Artist</label>
+        <select class="form-control" name="artist_ids[]" id="artist_ids" multiple>
+          @foreach($artists as $artist)
+            <option value="{{ $artist->id }}"> 
+              {{ $artist->name . ' ' . $artist->lastname }} 
+            </option>
+          @endforeach
+        </select>
+      </div>
+    @endif
 
     <div class="form-group">
       <label for="description">Description</label>

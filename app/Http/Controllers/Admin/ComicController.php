@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Artist;
+use App\Author;
 use App\Comic;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -27,7 +29,9 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('admin.comics.create');
+        $authors = Author::all();
+        $artists = Artist::all();
+        return view('admin.comics.create', compact('authors', 'artists'));
     }
 
     /**
@@ -43,8 +47,7 @@ class ComicController extends Controller
             'series' => 'required',
             'cover' => 'required|mimes:jpeg,png,jpg,gif,svg|max:500',
             'description' => 'required',
-            'author' => 'required',
-            'artist' => 'required',
+            'author_id' => 'required|integer|min:1',
             'volume' => 'required|integer|min:0',
             'price' => 'nullable|numeric',
             'trim_size' => 'nullable',
@@ -54,8 +57,8 @@ class ComicController extends Controller
         ]);
 
         $validatedData['available'] = $request->has('available') ? 1 : 0;
+        dd($validatedData, $request->artist_ids);
         $cover = Storage::put('cover_imgs', $request->cover);
-        dd($validatedData, $cover);
 
 
     }
