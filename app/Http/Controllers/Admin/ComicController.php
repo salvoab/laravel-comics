@@ -57,10 +57,16 @@ class ComicController extends Controller
         ]);
 
         $validatedData['available'] = $request->has('available') ? 1 : 0;
-        dd($validatedData, $request->artist_ids);
-        $cover = Storage::put('cover_imgs', $request->cover);
+        //dd($validatedData, $request->artist_ids);
 
+        $cover = Storage::put('cover_imgs', $request->cover); //Salvo l'immagine e conservo il percorso in $cover
+        $validatedData['cover'] = $cover;
+        Comic::create($validatedData);
 
+        $comic = Comic::orderBy('id', 'desc')->first(); // prendo il comic appena creato
+        $comic->artists()->attach($request->artist_ids); // e lo metto in relazione con i suoi artisti
+
+        return redirect()->route('admin.comics.index');
     }
 
     /**

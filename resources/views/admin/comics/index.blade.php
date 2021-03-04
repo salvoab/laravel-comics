@@ -26,7 +26,7 @@
                 <td>{{ $comic->volume }}</td>
                 <td class="d-flex justify-content-between">
                     <a href="{{ route('admin.comics.show', ['comic'=> $comic->id]) }}" class="btn btn-primary"> <i class="fas fa-eye fa-xs fa-fw"></i> </a>
-                    <a href="{{ route('admin.comic.edit', ['comic'=> $comic->id]) }}" class="btn btn-secondary"> <i class="fas fa-pen fa-xs fa-fw"></i> </a>
+                    <a href="{{ route('admin.comics.edit', ['comic'=> $comic->id]) }}" class="btn btn-secondary"> <i class="fas fa-pen fa-xs fa-fw"></i> </a>
                     <a href="#" class="btn btn-danger"> <i class="fas fa-trash fa-xs fa-fw"></i> </a>
                 </td>
             </tr>
