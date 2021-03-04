@@ -88,7 +88,7 @@ class ArticleController extends Controller
         ]);
         
         if($request->has('cover')){
-            $cover = Storage::put('artilce_covers', $request->cover); //Salvo l'immagine e conservo il percorso in $cover
+            $cover = Storage::put('article_covers', $request->cover); //Salvo l'immagine e conservo il percorso in $cover
             $validatedData['cover'] = $cover;
             $oldArticle = Article::find($article->id); // prendo l'articolo nel database prima di aggiornarlo
             Storage::delete($oldArticle->cover); // e cancella la sua vecchia cover
@@ -106,6 +106,8 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        Storage::delete($article->cover);
+        $article->delete();
+        return redirect()->route('admin.articles.index');
     }
 }
