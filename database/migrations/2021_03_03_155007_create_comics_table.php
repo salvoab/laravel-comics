@@ -17,9 +17,7 @@ class CreateComicsTable extends Migration
             $table->id();
             $table->string('series');
             $table->string('cover');
-            $table->string('description');
-            $table->string('author');
-            $table->string('artist');
+            $table->text('description');
             $table->unsignedSmallInteger('volume');
             $table->float('price', 4, 2)->nullable();
             $table->string('trim_size')->nullable();
