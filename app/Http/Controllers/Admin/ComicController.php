@@ -136,6 +136,25 @@ class ComicController extends Controller
      */
     public function destroy(Comic $comic)
     {
-        //
+        Storage::delete($comic->cover);
+        $artistIds = $this->extractIds($comic->artists);
+        $comic->artists()->detach($artistIds); // Rimuovo i record nella tabella artist_comic inerenti al comic che sto per cancellare
+        $comic->delete();
+        return redirect()->route('admin.comics.index');
+    }
+
+    /**
+     * Take a collection of models and return an array of their ids
+     * 
+     * @param \Illuminate\Database\Eloquent\Collection $models
+     * @return array Array containing the models' ids 
+    */
+    private function extractIds($models)
+    {
+        $ids = [];
+        foreach($models as $model){
+            $ids[] = $model->id;
+        }
+        return $ids;
     }
 }
