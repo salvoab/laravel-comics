@@ -21,7 +21,7 @@
             @foreach($comics as $comic)
             <tr>
                 <td scope="row">{{ $comic->id }}</td>
-                <td><img class="preview-img" src="{{ asset('storage/' . $comic->cover) }}"></td>
+                <td><img class="preview_img" src="{{ asset('storage/' . $comic->cover) }}"></td>
                 <td>{{ $comic->series }}</td>
                 <td>{{ $comic->volume }}</td>
                 <td class="d-flex justify-content-between">
