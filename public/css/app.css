@@ -11011,3 +11011,26 @@ header .main_nav .container .right_nav img {
   right: 10px;
 }
 
+footer .buy_bar {
+  padding: 60px 100px;
+  background-color: #0282f9;
+}
+
+footer .buy_bar .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .buy_bar .container .buy_element {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .buy_bar .container .buy_element a {
+  color: white;
+  text-transform: uppercase;
+  margin-left: 8px;
+}
+
