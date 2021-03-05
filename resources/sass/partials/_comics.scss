@@ -31,6 +31,7 @@
     }
 
     .comics{
+        padding-bottom: 20px;
         background-color: black;
         width: 100%;
         display: flex;
@@ -47,6 +48,19 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+            }
+
+            .series, .available{
+                margin: 0;
+                padding: 2px 0;
+            }
+            .series{
+                margin-top: 8px;
+                color: white;
+                text-transform: uppercase;
+            }
+            .available{
+                color: $main_color;
             }
         }
     }

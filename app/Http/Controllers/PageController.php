@@ -16,7 +16,8 @@ class PageController extends Controller
     public function comics()
     {
         $comics = Comic::all()->take(4);
-        return view('guests.comics', compact('comics'));
+        $articles = Article::all()->take(3);
+        return view('guests.comics', compact('comics', 'articles'));
     }
 
     public function showComic(Comic $comic)

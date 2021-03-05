@@ -11136,6 +11136,7 @@ footer .lower_footer .container .socials > * {
 }
 
 .top_comic_page .comics {
+  padding-bottom: 20px;
   background-color: black;
   width: 100%;
   display: flex;
@@ -11154,5 +11155,21 @@ footer .lower_footer .container .socials > * {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.top_comic_page .comics .comic_wrapper .series,
+.top_comic_page .comics .comic_wrapper .available {
+  margin: 0;
+  padding: 2px 0;
+}
+
+.top_comic_page .comics .comic_wrapper .series {
+  margin-top: 8px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.top_comic_page .comics .comic_wrapper .available {
+  color: #0282f9;
 }
 

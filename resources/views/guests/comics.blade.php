@@ -27,9 +27,23 @@
                 </a>
 
                 <div class="tag">COMIC BOOK</div>
+                <p class="series">{{ $comic->series . ' #' . $comic->volume }}</p>
+                <p class="available">
+                    {{ ($comic->available == 1) ? 'AVAILABLE NOW' : 'AVAILABLE SOON'}}
+                </p>
             </div>
         @endforeach
     </div>
 </div>
 
+<div class="middle_comic_page">
+    <div class="container">
+        <h2>MUST READS</h2>
+        <div class="articles">
+            @foreach($articles as $article)
+                <img src="{{ asset('storage/' . $article->cover) }}" alt="$article->title">
+            @endforeach
+        </div>
+    </div>
+</div>
 @endsection
