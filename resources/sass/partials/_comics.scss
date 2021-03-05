@@ -1,8 +1,54 @@
 .top_comic_page{
-    background-color: black;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
+    nav{
+        background-color: black;
+        
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
+            .left{
+                background-color: $main_color;
+                color: white;
+                padding: 12px;
+                position: relative;
+                top: -30px;
+            }
+
+            .right{
+                a{
+                    padding: 0 10px;
+                    color: lightgrey;
+                    text-transform: uppercase;
+                }
+
+                .active{
+                    color: $main_color;
+                }
+
+            }
+        }
+    }
+
+    .comics{
+        background-color: black;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .comic_wrapper{
+            position: relative;
+
+            .tag{
+                background-color: $main_color;
+                color: white;
+                padding: 8px;
+                text-transform: uppercase;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
 
 }

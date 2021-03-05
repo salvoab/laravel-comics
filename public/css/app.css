@@ -11107,10 +11107,52 @@ footer .lower_footer .container .socials > * {
   padding: 0 10px;
 }
 
-.top_comic_page {
+.top_comic_page nav {
+  background-color: black;
+}
+
+.top_comic_page nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_comic_page nav .container .left {
+  background-color: #0282f9;
+  color: white;
+  padding: 12px;
+  position: relative;
+  top: -30px;
+}
+
+.top_comic_page nav .container .right a {
+  padding: 0 10px;
+  color: lightgrey;
+  text-transform: uppercase;
+}
+
+.top_comic_page nav .container .right .active {
+  color: #0282f9;
+}
+
+.top_comic_page .comics {
   background-color: black;
   width: 100%;
   display: flex;
   justify-content: space-around;
+}
+
+.top_comic_page .comics .comic_wrapper {
+  position: relative;
+}
+
+.top_comic_page .comics .comic_wrapper .tag {
+  background-color: #0282f9;
+  color: white;
+  padding: 8px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
