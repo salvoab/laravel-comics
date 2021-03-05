@@ -11034,3 +11034,42 @@ footer .buy_bar .container .buy_element a {
   margin-left: 8px;
 }
 
+footer .middle_footer {
+  height: 450px;
+  background-color: black;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+footer .middle_footer .card_footer {
+  margin-top: 60px;
+}
+
+footer .middle_footer .card_footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer .middle_footer .card_footer ul li {
+  padding: 6px 0;
+  font-size: 12px;
+}
+
+footer .middle_footer .copyright {
+  font-size: 10px;
+}
+
+footer .middle_footer .background_logo {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+footer .middle_footer .background_logo img {
+  position: relative;
+  top: -50px;
+  width: 100%;
+}
+

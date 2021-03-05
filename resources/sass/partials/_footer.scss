@@ -23,4 +23,42 @@ footer{
             }
         }
     }
+
+    .middle_footer{
+        height: 450px;
+        background-color: black;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+
+        .card_footer{
+            margin-top: 60px;
+            ul{
+                padding: 0;
+                list-style: none;
+
+                li{
+                    padding: 6px 0;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .copyright{
+            font-size: 10px;
+        }
+
+        .background_logo{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            
+            img{
+                position: relative;
+                top: -50px;
+                width: 100%;
+            }
+        }
+    }
 }

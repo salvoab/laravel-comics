@@ -58,31 +58,7 @@
             @yield('content')
         </main>
 
-        <footer>
-            <div class="buy_bar">
-                <div class="container">
-                    <div class="buy_element">
-                        <img src="{{ asset('img/buy-bar-DCUI.svg') }}" alt="search">
-                        <a href="#">DIGITAL COMICS</a>
-                    </div>
-
-                    <div class="buy_element">
-                        <img src="{{ asset('img/buy-bar-DCshop.svg') }}" alt="search">
-                        <a href="#">DC MERCHANDISE</a>
-                    </div>
-
-                    <div class="buy_element">
-                        <img src="{{ asset('img/buy-bar-subscription.svg') }}" alt="search">
-                        <a href="#">PRINT SUBSCRIPTIONS</a>
-                    </div>
-
-                    <div class="buy_element">
-                        <img src="{{ asset('img/buy-bar-locator.svg') }}" alt="search">
-                        <a href="#">COMIC SHOP LOCATOR</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @include('layouts.partials.footer')
     </div>
 </body>
 </html>
