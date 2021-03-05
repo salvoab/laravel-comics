@@ -1,0 +1,20 @@
+header{
+    .nav_top{
+        background-color: $main_color;
+        padding: 0 24px;
+
+        .first{
+            background-color: white;
+        }
+
+        .top_link{
+            width: 160px;
+            padding: 8px 38px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+        }
+    }
+}

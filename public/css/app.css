@@ -10948,3 +10948,22 @@ a.text-dark:focus {
   width: 16%;
 }
 
+header .nav_top {
+  background-color: #0282f9;
+  padding: 0 24px;
+}
+
+header .nav_top .first {
+  background-color: white;
+}
+
+header .nav_top .top_link {
+  width: 160px;
+  padding: 8px 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
