@@ -85,7 +85,20 @@
        </div>
     </div>
 
-    <div class="low_footer">
+    <div class="lower_footer">
+        <div class="container">
+            <div class="signup">
+                <a href="#">SIGN-UP NOW!</a>
+            </div>
 
+            <div class="socials">
+                <strong>FOLLOW US</strong>
+                <img src="{{ asset('img/footer-facebook.png') }}" alt="facebook logo">
+                <img src="{{ asset('img/footer-twitter.png') }}" alt="facebook logo">
+                <img src="{{ asset('img/footer-youtube.png') }}" alt="facebook logo">
+                <img src="{{ asset('img/footer-pinterest.png') }}" alt="facebook logo">
+                <img src="{{ asset('img/footer-periscope.png') }}" alt="facebook logo">
+            </div>
+        </div>
     </div>
 </footer>

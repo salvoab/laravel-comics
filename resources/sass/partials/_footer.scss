@@ -23,7 +23,9 @@ footer{
             }
         }
     }
+    //end buy_bar
 
+    //middle_footer
     .middle_footer{
         height: 450px;
         background-color: black;
@@ -61,4 +63,46 @@ footer{
             }
         }
     }
+    //END middle_footer
+
+    //lower_footer
+    .lower_footer{
+        background-color: $secondary_color;
+        height: 100px;
+        display: flex;
+        align-items: center;
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .signup{
+                a{
+                    padding: 10px;
+                    font-size: 18px;
+                    color: white;
+                    border: 2px solid $main_color;
+
+                    &:hover{
+                        background-color: $main_color;
+                        text-decoration: none;
+                    }
+                }
+            }
+
+            .socials{
+                strong{
+                    color: $main_color;
+                    font-size: 18px;
+                }
+
+                & > *{
+                    padding: 0 10px;
+                }
+            }
+        }
+
+    }
+    //END lower_footer
 }
