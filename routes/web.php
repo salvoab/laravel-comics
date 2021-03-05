@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PageController@index')->name('home');
+Route::get('comics', 'PageController@comics')->name('comics');
+Route::get('comics/{comic}', 'PageController@showComic')->name('show_comic');
+
 
 Auth::routes();
 

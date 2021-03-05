@@ -11107,3 +11107,10 @@ footer .lower_footer .container .socials > * {
   padding: 0 10px;
 }
 
+.top_comic_page {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+

@@ -18,6 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <style>
+        body{
+            background-color: white;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -32,12 +38,12 @@
             <nav class="main_nav">
                 <div class="container">
                     <div class="left_nav">
-                        <img src="{{ asset('img/logo.png') }}" alt="DC Logo">
+                        <a href="{{ route('home') }}"> <img src="{{ asset('img/logo.png') }}" alt="DC Logo"> </a>
                     </div>
                     <div class="middle_nav">
                         <ul>
                             <li><a href="#">CHARACTERS</a></li>
-                            <li><a href="#">COMICS</a></li>
+                            <li><a href="{{ route('comics') }}">COMICS</a></li>
                             <li><a href="#">MOVIES</a></li>
                             <li><a href="#">TV</a></li>
                             <li><a href="#">GAMES</a></li>
