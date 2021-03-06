@@ -40,6 +40,8 @@ class ArticleController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required|max:255',
+            'category' => 'nullable|max:255',
+            'summary' => 'nullable|max:255',
             'body' => 'required',
             'cover' => 'mimes:jpeg,png,jpg,gif,svg|max:500'
         ]);
@@ -84,6 +86,8 @@ class ArticleController extends Controller
     {
         $validatedData = $request->validate([
             'title' => 'required',
+            'category' => 'nullable|max:255',
+            'summary' => 'nullable|max:255',
             'body' => 'required'
         ]);
         

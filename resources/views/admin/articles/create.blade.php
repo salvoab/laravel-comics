@@ -14,16 +14,32 @@
         @csrf
 
         <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" name="title" id="title" placeholder="Titolo" required value="{{ old('title') }}">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Titolo" required value="{{ old('title') }}">
         </div>
         @error('title')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
 
         <div class="form-group">
-        <label for="body">Body</label>
-        <textarea class="form-control" name="body" id="body" rows="3" required>{{ old('body') }}</textarea>
+            <label for="category">Category</label>
+            <input type="text" class="form-control" name="category" id="category" placeholder="Titolo" required value="{{ old('category') }}">
+        </div>
+        @error('category')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
+        <div class="form-group">
+            <label for="summary">Summary</label>
+            <textarea class="form-control" name="summary" id="summary" rows="3" required>{{ old('summary') }}</textarea>
+        </div>
+        @error('summary')
+            <div class="alert alert-danger">{{ $message }}</div>
+        @enderror
+
+        <div class="form-group">
+            <label for="body">Body</label>
+            <textarea class="form-control" name="body" id="body" rows="3" required>{{ old('body') }}</textarea>
         </div>
         @error('body')
             <div class="alert alert-danger">{{ $message }}</div>

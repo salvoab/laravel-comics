@@ -36,10 +36,10 @@
     </div>
 </div>
 
-<div class="middle_comic_page">
+<div class="middle_comic_page my-4">
     <div class="container">
         <h2>MUST READS</h2>
-        <div class="articles">
+        <div class="articles my-4">
             @foreach($articles as $article)
                 <img src="{{ asset('storage/' . $article->cover) }}" alt="$article->title">
             @endforeach
