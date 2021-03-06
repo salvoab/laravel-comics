@@ -58,6 +58,7 @@
                     </div>
                 </div>
             </nav>
+            <hr>
         </header>
 
         <main class="py-4">

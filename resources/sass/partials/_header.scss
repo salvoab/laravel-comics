@@ -13,14 +13,18 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;
-            border-left: 1px solid white;
-            border-right: 1px solid white;
+            border-left: 1px solid #3797F6;   
+            transform: skew(-15deg);
+
+            img{
+                transform: skew(15deg);
+            }
         }
     }
 
     .main_nav{
         background-color: white;
-        padding: 30px 0;
+        padding-top: 30px;
 
         .container{
             display: flex;
