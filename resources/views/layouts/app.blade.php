@@ -19,6 +19,9 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    
     <style>
         body{
             background-color: white;
@@ -49,7 +52,7 @@
                             <li><a href="#">GAMES</a></li>
                             <li><a href="#">VIDEOS</a></li>
                             <li><a href="#">NEWS</a></li>
-                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">SHOP <i class="fas fa-caret-down fa-sm fa-fw"></i></a></li>
                         </ul>
                     </div>
                     <div class="right_nav">

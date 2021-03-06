@@ -26,6 +26,10 @@ header{
         background-color: white;
         padding-top: 30px;
 
+        i{
+            color: $main_color;
+        }
+
         .container{
             display: flex;
             justify-content: space-between;

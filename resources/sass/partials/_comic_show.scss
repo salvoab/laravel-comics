@@ -49,3 +49,42 @@
         }
     }
 }
+
+/////////////////////////
+//middle_comic_show_page
+.middle_comic_show_page{
+    color: #003f5e;
+
+    h2{
+        text-transform: uppercase;
+        font-weight: bolder;
+    }
+
+    .show_available{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+        .price{
+            width: 70%;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            border-right: 1px solid #003f5e;
+
+            span:last-child{
+                opacity: 0.75;
+            }
+        }
+
+        .check_available{
+            padding: 12px;
+        }
+
+    }
+
+    .description{
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+}

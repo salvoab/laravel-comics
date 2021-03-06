@@ -10,4 +10,28 @@
     </div>
 </div>
 
+
+<div class="middle_comic_show_page py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-lg-6">
+                <h2>{{ $comic->series . ' #' . $comic->volume }}</h2>
+                <div class="show_available {{ ($comic->available == 1) ? 'bg_green' : 'bg_red' }}">
+                    <div class="price">
+                        <span>U.S. Price: ${{$comic->price}}</span> 
+                        <span>{{ ($comic->available == 1) ? 'AVAILABLE' : 'NOT AVAILABLE' }}</span>
+                    </div>
+                    <div class="check_available">
+                        <span>Check Availability</span>
+                        <i class="fas fa-caret-down fa-sm fa-fw"></i>
+                    </div>
+                </div>
+
+                <p class="description">{{ $comic->description }}</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
 @endsection
