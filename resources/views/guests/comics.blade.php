@@ -5,7 +5,7 @@
 <div class="top_comic_page">
     <nav>
         <div class="container">
-            <div class="left"> 
+            <div class="big_tag"> 
                 <h2>COMICS & GRAPHIC NOVELS</h2> 
             </div>
 
@@ -27,7 +27,9 @@
                 </a>
 
                 <div class="tag">COMIC BOOK</div>
-                <p class="series">{{ $comic->series . ' #' . $comic->volume }}</p>
+                <a href="{{route('show_comic', ['comic'=> $comic->id])}}">
+                    <p class="series">{{ $comic->series . ' #' . $comic->volume }}</p>
+                </a>
                 <p class="available">
                     {{ ($comic->available == 1) ? 'AVAILABLE NOW' : 'AVAILABLE SOON'}}
                 </p>
@@ -51,4 +53,23 @@
         </div>
     </div>
 </div>
+
+<div class="lower_comic_page py-4">
+    <div class="container">
+        <div class="big_tag"> 
+            <h2>CURRENT SERIES</h2> 
+        </div>
+        <div class="row">
+            @for ($i = 0; $i < 12; $i++)
+                <div class="col-xs-12 col-md-4 col-lg-2">
+                    <div class="current_series">
+                        <img src="{{ asset('img/DC_placeholder_series.jpg') }}" alt="DC placeholder image">
+                        <h6>SERIES' NAME</h6>
+                    </div>
+                </div>
+            @endfor
+        </div>
+    </div>
+</div>
+
 @endsection

@@ -11111,6 +11111,22 @@ footer .lower_footer .container .socials > * {
   padding: 0 10px;
 }
 
+.big_tag {
+  background-color: #0282f9;
+  color: white;
+  padding: 12px;
+  position: relative;
+  top: -30px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.top_comic_page {
+  padding-top: 40px;
+}
+
 .top_comic_page nav {
   background-color: black;
 }
@@ -11119,14 +11135,6 @@ footer .lower_footer .container .socials > * {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.top_comic_page nav .container .left {
-  background-color: #0282f9;
-  color: white;
-  padding: 12px;
-  position: relative;
-  top: -30px;
 }
 
 .top_comic_page nav .container .right a {
@@ -11200,5 +11208,28 @@ footer .lower_footer .container .socials > * {
 .middle_comic_page .article img {
   width: 100%;
   margin-bottom: 10px;
+}
+
+.lower_comic_page {
+  background-color: black;
+}
+
+.lower_comic_page .big_tag {
+  width: 270px;
+  top: -50px;
+}
+
+.lower_comic_page .current_series {
+  padding: 10px;
+}
+
+.lower_comic_page .current_series img {
+  width: 100%;
+}
+
+.lower_comic_page .current_series h6 {
+  margin: 12px 0;
+  font-size: 12px;
+  color: white;
 }
 

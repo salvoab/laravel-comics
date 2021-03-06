@@ -61,7 +61,7 @@
             <hr>
         </header>
 
-        <main class="py-4">
+        <main>
             @yield('content')
         </main>
 

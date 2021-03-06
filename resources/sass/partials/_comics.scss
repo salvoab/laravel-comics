@@ -1,4 +1,18 @@
+.big_tag{
+    background-color: $main_color;
+    color: white;
+    padding: 12px;
+    position: relative;
+    top: -30px;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
 .top_comic_page{
+    padding-top: 40px;
+
     nav{
         background-color: black;
         
@@ -6,14 +20,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            .left{
-                background-color: $main_color;
-                color: white;
-                padding: 12px;
-                position: relative;
-                top: -30px;
-            }
 
             .right{
                 a{
@@ -67,7 +73,7 @@
 
 }
 
-/////////////////////
+////////////////////
 //middle_comic_page
 
 .middle_comic_page{
@@ -88,6 +94,31 @@
         img{
             width: 100%;
             margin-bottom: 10px;
+        }
+    }
+}
+
+////////////////////
+//lower_comic_page
+.lower_comic_page{
+    background-color: black;
+
+    .big_tag{
+        width: 270px;
+        top: -50px;
+    }
+
+    .current_series{
+        padding: 10px;
+
+        img{
+            width: 100%;
+        }
+
+        h6{
+            margin: 12px 0;
+            font-size: 12px;
+            color: white;
         }
     }
 }
