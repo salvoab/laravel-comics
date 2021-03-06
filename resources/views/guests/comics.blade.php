@@ -39,9 +39,14 @@
 <div class="middle_comic_page my-4">
     <div class="container">
         <h2>MUST READS</h2>
-        <div class="articles my-4">
+        <div class="articles my-4 d-flex">
             @foreach($articles as $article)
-                <img src="{{ asset('storage/' . $article->cover) }}" alt="$article->title">
+                <div class="article">
+                    <img src="{{ asset('storage/' . $article->cover) }}" alt="$article->title">
+                    <h6>{{ $article->title }}</h6>
+                    <h5>{{ $article->category }}</h5>
+                    <p>{{ $article->summary }}</p>
+                </div>
             @endforeach
         </div>
     </div>

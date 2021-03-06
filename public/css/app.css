@@ -11175,7 +11175,26 @@ footer .lower_footer .container .socials > * {
 
 .middle_comic_page h2 {
   margin-left: 50px;
-  color: #0282f9;
+}
+
+.middle_comic_page h2,
+.middle_comic_page h5,
+.middle_comic_page h6 {
   font-weight: bolder;
+}
+
+.middle_comic_page h2,
+.middle_comic_page h6 {
+  color: #0282f9;
+}
+
+.middle_comic_page .article {
+  width: calc(100% / 4);
+  margin-right: 20px;
+}
+
+.middle_comic_page .article img {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
