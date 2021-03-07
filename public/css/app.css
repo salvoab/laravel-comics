@@ -11356,3 +11356,8 @@ footer .lower_footer .container .socials > * {
   width: calc(100% / 3);
 }
 
+.lower_comic_show_page .information dt,
+.lower_comic_show_page .information dd {
+  font-size: 12px;
+}
+
