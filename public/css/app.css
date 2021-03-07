@@ -11333,3 +11333,26 @@ footer .lower_footer .container .socials > * {
   padding-bottom: 60px;
 }
 
+.lower_comic_show_page {
+  padding-top: 40px;
+  padding-bottom: 90px;
+  color: #003f5e;
+  background-color: #f6f6f6;
+}
+
+.lower_comic_show_page h4 {
+  font-weight: bolder;
+}
+
+.lower_comic_show_page .informations {
+  padding: 0 20px;
+}
+
+.lower_comic_show_page .information {
+  display: flex;
+}
+
+.lower_comic_show_page .information dt {
+  width: calc(100% / 3);
+}
+

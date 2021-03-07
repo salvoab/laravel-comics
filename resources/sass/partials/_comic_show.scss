@@ -88,3 +88,27 @@
         padding-bottom: 60px;
     }
 }
+
+////////////////////////
+//lower_comic_show_page
+.lower_comic_show_page{
+    padding-top: 40px;
+    padding-bottom: 90px;
+    color: #003f5e;
+    background-color: #f6f6f6;
+
+    h4{
+        font-weight: bolder;
+    }
+    .informations{
+        padding: 0 20px;
+    }
+
+    .information{
+        display: flex;
+
+        dt{
+            width: calc(100% / 3);
+        }
+    }
+}
