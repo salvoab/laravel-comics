@@ -46,7 +46,7 @@
                     <div class="middle_nav">
                         <ul>
                             <li><a href="#">CHARACTERS</a></li>
-                            <li><a href="{{ route('comics') }}">COMICS</a></li>
+                            <li><a href="{{ route('comics') }}" class="active">COMICS</a></li>
                             <li><a href="#">MOVIES</a></li>
                             <li><a href="#">TV</a></li>
                             <li><a href="#">GAMES</a></li>

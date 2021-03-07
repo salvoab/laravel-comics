@@ -10960,6 +10960,21 @@ a:hover {
   background-color: #e3342f;
 }
 
+header .active {
+  position: relative;
+}
+
+header .active::after {
+  content: "";
+  width: 100%;
+  height: 8px;
+  display: block;
+  background-color: #0282f9;
+  position: absolute;
+  left: 0;
+  bottom: -65px;
+}
+
 header .nav_top {
   background-color: #0282f9;
   padding: 0 24px;
