@@ -11055,7 +11055,7 @@ footer .buy_bar .container .buy_element a {
 }
 
 footer .middle_footer {
-  height: 450px;
+  height: 470px;
   background-color: black;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -11077,8 +11077,17 @@ footer .middle_footer .card_footer ul li {
   font-size: 12px;
 }
 
+footer .middle_footer .card_footer ul li a {
+  color: #959595;
+}
+
+footer .middle_footer .card_footer ul li a:hover {
+  color: #0282f9;
+}
+
 footer .middle_footer .copyright {
-  font-size: 10px;
+  color: #959595;
+  font-size: 12px;
 }
 
 footer .middle_footer .background_logo {

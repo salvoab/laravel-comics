@@ -27,7 +27,7 @@ footer{
 
     //middle_footer
     .middle_footer{
-        height: 450px;
+        height: 470px;
         background-color: black;
         overflow: hidden;
         background-repeat: no-repeat;
@@ -43,12 +43,21 @@ footer{
                 li{
                     padding: 6px 0;
                     font-size: 12px;
+
+                    a{
+                        color: $grey;
+
+                        &:hover{
+                            color: $main_color;
+                        }
+                    }
                 }
             }
         }
 
         .copyright{
-            font-size: 10px;
+            color: $grey;
+            font-size: 12px;
         }
 
         .background_logo{

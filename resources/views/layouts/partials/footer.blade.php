@@ -2,23 +2,31 @@
     <div class="buy_bar">
         <div class="container">
             <div class="buy_element">
-                <img src="{{ asset('img/buy-bar-DCUI.svg') }}" alt="search">
-                <a href="#">DIGITAL COMICS</a>
+                <a href="#">
+                    <img src="{{ asset('img/buy-bar-DCUI.svg') }}" alt="search">
+                    DIGITAL COMICS
+                </a>
             </div>
 
             <div class="buy_element">
-                <img src="{{ asset('img/buy-bar-DCshop.svg') }}" alt="search">
-                <a href="#">DC MERCHANDISE</a>
+                <a href="#">
+                    <img src="{{ asset('img/buy-bar-DCshop.svg') }}" alt="search">
+                    DC MERCHANDISE
+                </a>
             </div>
 
             <div class="buy_element">
-                <img src="{{ asset('img/buy-bar-subscription.svg') }}" alt="search">
-                <a href="#">PRINT SUBSCRIPTIONS</a>
+                <a href="#">
+                    <img src="{{ asset('img/buy-bar-subscription.svg') }}" alt="search">
+                    PRINT SUBSCRIPTIONS
+                </a>
             </div>
 
             <div class="buy_element">
-                <img src="{{ asset('img/buy-bar-locator.svg') }}" alt="search">
-                <a href="#">COMIC SHOP LOCATOR</a>
+                <a href="#">
+                    <img src="{{ asset('img/buy-bar-locator.svg') }}" alt="search">
+                    COMIC SHOP LOCATOR
+                </a>
             </div>
         </div>
     </div>
@@ -33,44 +41,51 @@
                            <div class="card_footer">
                                 <h4>DC COMICS</h4>
                                 <ul>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
+                                    <li> <a href="#">Characters</a> </li>
+                                    <li><a href="{{ route('comics') }}">Comics</a></li>
+                                    <li><a href="#">Movies</a></li>
+                                    <li><a href="#">TV</a></li>
+                                    <li><a href="#">Games</a></li>
+                                    <li><a href="#">Videos</a></li>
+                                    <li><a href="#">News</a></li>
                                 </ul>
                            </div>
                        </div>
 
                        <div class="col-xs-12 col-md-4 col-lg-4">
                            <div class="card_footer">
-                                <h4>DC COMICS</h4>
+                                <h4>DC</h4>
                                 <ul>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
+                                    <li><a href="#">Terms Of Use</a></li>
+                                    <li><a href="#">Privacy Policy (New)</a></li>
+                                    <li><a href="#">Advertising</a></li>
+                                    <li><a href="#">Jobs</a></li>
+                                    <li><a href="#">Subscriptions</a></li>
+                                    <li><a href="#">Talent Workshop</a></li>
+                                    <li><a href="#">CPSC Certificates</a></li>
+                                    <li><a href="#">Ratings</a></li>
+                                    <li><a href="#">Shop Help</a></li>
+                                    <li><a href="#">Contact Us</a></li>
                                 </ul>
                            </div>
                        </div>
 
                        <div class="col-xs-12 col-md-4 col-lg-4">
                            <div class="card_footer">
-                                <h4>DC COMICS</h4>
+                                <h4>SITES</h4>
                                 <ul>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
-                                    <li>link</li>
+                                    <li><a href="#">DC</a></li>
+                                    <li><a href="#">MAD Magazine</a></li>
+                                    <li><a href="#">DC Kids</a></li>
+                                    <li><a href="#">DC Universe</a></li>
+                                    <li><a href="#">DC Shop</a></li>
                                 </ul>
                            </div>
                        </div>
                    </div>
                    <div class="row">
                        <div class="copyright">
-                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, itaque? Cumque aliquid cum harum veritatis numquam debitis ducimus voluptas et.
+                            <p> All Site Content TM and © 2020 DC Entertainment, unless otherwise <a href="#">noted here</a>. All rights reserved. <a href="#">Cookies Settings</a></p>
                        </div>
                    </div>
                </div>
