@@ -79,7 +79,7 @@
                     <hr>
                     <div class="information">
                         <dt>On Sale Date</dt>
-                        <dd>{{$comic->sale_date}}</dd>
+                        <dd>{{ date_format( date_create($comic->sale_date), 'M j Y') }}</dd>
                     </div>
                     <hr>
                     <div class="information">
